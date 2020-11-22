@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <img src="<?= base_url() ?>/template/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">DOM Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -24,31 +24,41 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="/" class="nav-link <?php if ($title == 'Home') {
+                                                    print 'active';
+                                                } ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/pegawai" class="nav-link">
+                    <a href="/pegawai" class="nav-link <?php if ($title == 'Home | Data Pegawai') {
+                                                            print 'active';
+                                                        } ?>">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Pegawai</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link <?php if ($title == 'Home | Data Divisi') {
+                                                    print 'active';
+                                                } ?>">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Divisi</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link <?php if ($title == 'Home | Data Jabatan') {
+                                                    print 'active';
+                                                } ?>">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Jabatan</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link <?php if ($title == 'Home | About Us') {
+                                                    print 'active';
+                                                } ?>">
                         <i class="far fa-circle nav-icon"></i>
                         <p>About Us</p>
                     </a>
@@ -68,23 +78,3 @@
     </div>
     <!-- /.sidebar -->
 </aside>
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="mt-2 text-dark"><?= $title; ?></h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active"><?= $title; ?></li>
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-
-    <!-- /.content-header -->

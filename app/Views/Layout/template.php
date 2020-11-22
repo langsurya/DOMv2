@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="/css/style.css">
     <title><?= $title; ?></title>
 
     <!-- Font Awesome Icons -->
@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="<?= base_url() ?>/template/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- My CSS -->
 
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 
     <?= $this->include('layout/header'); ?>
     <?= $this->include('layout/sidebar'); ?>
@@ -26,7 +27,6 @@
     <?= $this->include('layout/footer'); ?>
 
     <!-- REQUIRED SCRIPTS -->
-
     <!-- jQuery 3.5.1 -->
     <script src="<?= base_url() ?>/template/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4.5.3 -->

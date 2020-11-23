@@ -91,7 +91,13 @@
                                                 <td>Jacob</td>
                                                 <td>Thornton</td>
                                                 <td>
-                                                    <a href="/pegawai/" class="btn btn-success">Detail</a>
+                                                    <a href="<?= base_url() ?>/pegawai/detail" data-target="#theModal" data-toggle="modal" class="btn btn-success">Detail</a>
+                                                    <div class="modal fade text-center" id="theModal">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>

@@ -65,7 +65,7 @@
 
                                                     <!-- Modal -->
                                                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                        <div class="modal-dialog">
+                                                        <div class="modal-dialog modal-dialog-centered">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
@@ -91,13 +91,7 @@
                                                 <td>Jacob</td>
                                                 <td>Thornton</td>
                                                 <td>
-                                                    <a href="<?= base_url() ?>/pegawai/detail" data-target="#theModal" data-toggle="modal" class="btn btn-success">Detail</a>
-                                                    <div class="modal fade text-center" id="theModal">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    <a href="/pegawai/" class="btn btn-success">Detail</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -145,7 +139,7 @@
                                     <!-- /.TABLE DATA PEGAWAI -->
                                 </div>
                                 <div class="card-footer clearfix">
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Tambah Data Pegawai</a>
+                                    <a href="/pegawai/create" class="btn btn-sm btn-info float-left">Tambah Data Pegawai</a>
                                 </div>
                             </div>
                         </div>

@@ -22,6 +22,15 @@ class Pegawai extends BaseController
         return view('/pegawai/detail', $data);
     }
 
+    public function create()
+    {
+        $data = [
+            'title' => 'Home | Tambah Pegawai',
+        ];
+
+        return view('/pegawai/create', $data);
+    }
+
     //--------------------------------------------------------------------
 
 }

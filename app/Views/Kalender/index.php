@@ -237,8 +237,35 @@
           // if so, remove the element from the "Draggable Events" list
           info.draggedEl.parentNode.removeChild(info.draggedEl);
         }
+      },
+      eventReceive: function(info) {
+        //get the bits of data we want to send into a simple object
+        var eventData = {
+          title: info.event.title,
+          start: info.event.start,
+          end: info.event.end
+        };
+        //send the data via an AJAX POST request, and log any response which comes from the server
+        fetch('/kalender/insert', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json'
+            },
+            body: encodeFormData(eventData)
+          })
+          .then(response => console.log(response))
+          .catch(error => console.log(error));
       }
     });
+
+    const encodeFormData = (data) => {
+      var form_data = new FormData();
+
+      for (var key in data) {
+        form_data.append(key, data[key]);
+      }
+      return form_data;
+    }
 
     calendar.render();
     // $('#calendar').fullCalendar()

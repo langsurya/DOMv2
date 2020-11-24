@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/fullcalendar-bootstrap/main.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>/css/style.css">
     <title><?= $title; ?></title>
@@ -26,18 +25,19 @@
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 
+    <!-- REQUIRED SCRIPTS -->
+    <!-- Bootstrap -->
+    <script src="<?= base_url() ?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="<?= base_url() ?>/template/plugins/jquery/jquery.min.js"></script>
+    <!-- ADMIN LTE -->
+    <script src="<?= base_url() ?>/template/dist/js/adminlte.min.js"></script>
+    <!-- KONTEN WEB DISINI! -->
     <?= $this->include('layout/header'); ?>
     <?= $this->include('layout/sidebar'); ?>
     <?= $this->renderSection('content'); ?>
     <?= $this->include('layout/footer'); ?>
 
-    <!-- REQUIRED SCRIPTS -->
-    <!-- jQuery -->
-    <script src="<?= base_url() ?>/template/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="<?= base_url() ?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ADMIN LTE -->
-    <script src="<?= base_url() ?>/template/dist/js/adminlte.min.js"></script>
 </body>
 
 </html>

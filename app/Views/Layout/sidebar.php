@@ -56,6 +56,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/kalender" class="nav-link <?php if ($title == 'Home | Kalender') {
+                                                    print 'active';
+                                                } ?>">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Kalender</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="#" class="nav-link <?php if ($title == 'Home | About Us') {
                                                     print 'active';
                                                 } ?>">

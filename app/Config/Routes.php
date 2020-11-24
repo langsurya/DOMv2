@@ -34,7 +34,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index');
 $routes->get('/pegawai/create', 'Pegawai::create');
 $routes->get('/pegawai/(:any)', 'Pegawai::detail/$1');
-// $routes->get('/pegawai/detail', 'Pegawai::detail');
+
+$routes->get('/kalender', 'Kalender::index');
 
 /**
  * --------------------------------------------------------------------

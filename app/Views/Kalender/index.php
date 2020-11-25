@@ -175,6 +175,17 @@
     });
 
     var calendar = new Calendar(calendarEl, {
+      timeZone: 'local',
+      events: [{
+          start: '2018-09-01T12:30:00Z'
+        }, // will be shifted to local
+        {
+          start: '2018-09-01T12:30:00+XX:XX'
+        }, // already same offset as local, so won't shift
+        {
+          start: '2018-09-01T12:30:00'
+        } // will be parsed as if it were '2018-09-01T12:30:00+XX:XX'
+      ],
       plugins: ['bootstrap', 'interaction', 'dayGrid', 'timeGrid'],
       header: {
         left: 'prev,next today',
@@ -229,6 +240,7 @@
           borderColor: '#3c8dbc' //Primary (light-blue)
         }
       ],
+      forceEventDuration: true,
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar !!!
       drop: function(info) {
@@ -243,10 +255,10 @@
         var eventData = {
           title: info.event.title,
           start: info.event.start,
-          end: info.event.end
+          end: info.event.end,
         };
         //send the data via an AJAX POST request, and log any response which comes from the server
-        fetch('/kalender/insert', {
+        fetch('/kalender/save', {
             method: 'POST',
             headers: {
               'Accept': 'application/json'
